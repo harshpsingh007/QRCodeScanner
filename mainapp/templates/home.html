@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block css %}
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Baloo Bhaina 2", cursive;
+    }
+    .navbar {
+      background: linear-gradient(182deg, black, transparent);
+    }
+    .qrcode {
+      filter: blur(8px);
+    }
+    .card {
+      box-shadow: 2px 2px 5px 5px currentColor;
+    }
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(358deg, black, transparent);
+      text-align: center;
+      color: white;
+    }
+    .container {
+      text-align: center;
+    }
+    .badge {
+      color: white;
+      background-color: black;
+    }
+
+{% endblock css %}
+{% block container %}
+ <div class="container my-3">
+      <h1>Current Value : <span class="badge">{{num}}</span></h1>
+      <div class="row">
+        <div class="card mx-3 my-3" style="width: 18rem">
+          <img
+            class="card-img-top qrcode"
+            src="media/Add.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Add 1 to DataBase</h5>
+            <p class="card-text">
+              Press the below button to add one to the database.
+            </p>
+            <a href="add" class="btn btn-outline-dark">Go To QR Code</a>
+          </div>
+        </div>
+        <div class="card mx-3 my-3" style="width: 18rem">
+          <img
+            class="card-img-top qrcode"
+            src="media/Subtract.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Subtract 1 from DataBase</h5>
+            <p class="card-text">
+              Press the below button to subtract one from the database.
+            </p>
+            <a href="subtract" class="btn btn-outline-dark">Go To QR Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock container %}

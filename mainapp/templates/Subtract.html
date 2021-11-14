@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block css %}
+      .qrcodeimg{
+          width:50vh
+      }
+      ul.b {
+        text-align: justify;
+  list-style-type: disclosure-closed;
+}
+{% endblock css %}
+{% block container %}
+      <div class="container my-3">
+      <h1>Steps to Subtract one (-1) from database.</h1>
+      <ul class="b">
+        <li>Open your QR Scanner App.</li>
+        <li>Scan this QR Code.</li>
+        <li>Go to the link given in the QR Code.</li>
+      </ul>
+      <hr>
+        <img src="media/Subtract.jpg" class="img-fluid qrcodeimg" alt="...">
+        <hr>
+        <a href="/" class="btn btn-outline-warning" >Go To Home</a>
+      </div>
+{% endblock container %}
